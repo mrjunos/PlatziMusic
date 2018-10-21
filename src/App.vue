@@ -3,12 +3,13 @@
     <img src="./assets/logo.png">
     <h1>PlatziMusic</h1>
     <ul>
-      <li v-for="artist in artists">{{artist.name}}</li>
+      <artist v-for="artist in artists" :artist="artist" :key="artist.mbid"/>
     </ul>
   </div>
 </template>
 
 <script>
+  import Artist from "./components/Artist.vue"
   import getArtists from "./api"
   export default {
     name: 'app',
@@ -16,6 +17,9 @@
       return {
         artists: []
       }
+    },
+    components: {
+      Artist,
     },
     mounted () {
       const self = this
