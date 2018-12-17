@@ -1,7 +1,7 @@
 <template lang="pug">
   <div id="app">
     <img src="https://mrjunos.github.io/PlatziMusic/dist/logo.png">
-    <h1>PlatziMusic</h1>
+    <h1>PlatziMusic By <a href="https://twitter.com/jjcadu">@jjcadu</a></h1>
     <select v-model="selectedCountry">
       <option v-for="country in countries" v-bind:value="country.value">{{country.name}}</option>
     </select>
